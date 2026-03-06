@@ -1,3 +1,4 @@
+chmod +x ./clash
 sudo ./clash -d ./
 
 https://zhichao.org/posts/c4fc1f
