@@ -1,4 +1,4 @@
-chmod +x ./clash
-sudo ./clash -d ./
+chmod +x ./mihomo-linux-amd64
+sudo ./mihomo-linux-amd64 -d ./
 
 https://zhichao.org/posts/c4fc1f
