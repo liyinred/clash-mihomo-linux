@@ -1,0 +1,4 @@
+chmod +x ./mihomo-linux-amd64-compatible
+sudo ./mihomo-linux-amd64-compatible -d ./
+
+https://zhichao.org/posts/c4fc1f

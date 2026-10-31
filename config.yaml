@@ -1,0 +1,558 @@
+mode: rule
+mixed-port: 7890
+bind-address: '*'
+allow-lan: false
+log-level: info
+ipv6: true
+external-controller: 0.0.0.0:9090
+external-ui: ./metacubexd-ui
+secret: "abc123456"
+unified-delay: true
+geodata-mode: false
+tcp-concurrent: true
+profile:
+  store-selected: true
+tun:
+  auto-detect-interface: true
+  auto-route: true
+  device: Mihomo
+  dns-hijack:
+  - any:53
+  mtu: 1500
+  route-exclude-address:
+  - 192.168.0.0/16
+  - 127.0.0.0/8
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  stack: mixed
+  strict-route: false
+  enable: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+
+proxies:
+- name: 剩余流量：1.54 TB
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: safari
+  servername: jp1-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/data/jp
+    headers:
+      Host: jp1-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 套餐到期：长期有效
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: safari
+  servername: jp1-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/data/jp
+    headers:
+      Host: jp1-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速01|CTCU|0.5x
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: safari
+  servername: jp1-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/data/jp
+    headers:
+      Host: jp1-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速02|CTCU|0.5x
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: safari
+  servername: jp2-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/data
+    headers:
+      Host: jp2-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速01|BGP|CTCUCM
+  type: vless
+  server: aws-link7.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: fastcdn.hoyoverse.com
+  reality-opts:
+    public-key: w7AGIp_u4slcX3JotLyiuaT05lawuzU3f1eL88RI53c
+    short-id: 1d77a374
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速02|BGP|CTCUCM
+  type: vless
+  server: aws-link8.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: iosapps.itunes.apple.com
+  reality-opts:
+    public-key: vDrdqD70aoQOIU5P5UU-h2h9wCu_tEOD4pGu8NOGvzA
+    short-id: 55c73a28
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速03|BGP|CTCUCM
+  type: vless
+  server: aws-link9.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: iosapps.itunes.apple.com
+  reality-opts:
+    public-key: ncsES25G1Nj31aY0kdaNrooqQOqqqaHLk8zbF2b4BGw
+    short-id: bef8fff6
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速04|BGP|CTCUCM
+  type: vless
+  server: aws-link30.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: www.lamer.com.hk
+  reality-opts:
+    public-key: NQboj96aHW_domplSIfIBqJpAnNN8rZokNYa-W-NdAo
+    short-id: fa6fb544
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速05|BGP|CTCUCM
+  type: vless
+  server: aws-link31.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: wXayfckurSM2zWeis7OAL_QVGm9wBLr0WYp2zFtJFAE
+    short-id: c7487aeb
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速06|BGP|CTCU
+  type: vless
+  server: cfyes.7770008.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-sg1.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/sg1
+    headers:
+      Host: lx-sg1.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速07|BGP|CTCU
+  type: vless
+  server: cfyes.7770008.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-sg1.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/sg1
+    headers:
+      Host: lx-sg1.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇸🇬新加坡高速08|BGP|CTCU
+  type: vless
+  server: cfyes.7770008.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-sg1.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/sg1
+    headers:
+      Host: lx-sg1.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速01|BGP|CUCM
+  type: vless
+  server: aws-link13.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: AYnt6YQxdEGfpWjo25H9ZvgPp_WxRbGWSkaptwTZJ3M
+    short-id: 131baaed
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速02|BGP|CUCM
+  type: vless
+  server: aws-link14.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: -nx1roqVG90gja9-412UcxR7tqdtdKqxuSHsSh03wm4
+    short-id: 93d482c0
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速03|BGP|CUCM
+  type: vless
+  server: aws-link19.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: p6pNXigacmPazS1t76m66ia0DcFgAxOshOiPgzVvNGs
+    short-id: '44099498'
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速04|BGP|CUCM
+  type: vless
+  server: aws-link20.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o
+    short-id: 6314e825
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速05|BGP|CUCM
+  type: vless
+  server: aws-link23.lxyun.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: download-porter.hoyoverse.com
+  reality-opts:
+    public-key: dLmUAqcdy4Z7iucApd9zjOhkXTjl-xt_eHumShIYW0c
+    short-id: ba826a54
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速06|BGP|CTCU
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: jp3-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/dash/jp
+    headers:
+      Host: jp3-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速07|BGP|CTCU
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: jp3-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/dash/jp
+    headers:
+      Host: jp3-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速08|BGP|CTCU
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: jp4-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/download/jp
+    headers:
+      Host: jp4-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇯🇵日本高速09|BGP|CTCU
+  type: vless
+  server: cfyes.7770006.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: jp4-lx.7770006.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/download/jp
+    headers:
+      Host: jp4-lx.7770006.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国高速01|CTCU|0.1x
+  type: vless
+  server: cfyes.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-us1.777096.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/us
+    headers:
+      Host: lx-us1.777096.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国高速02|CTCU|0.1x
+  type: vless
+  server: cfyes.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-us2.777096.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/us
+    headers:
+      Host: lx-us2.777096.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国高速03|CTCU|0.1x
+  type: vless
+  server: cfyes.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-us3.777096.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/us
+    headers:
+      Host: lx-us3.777096.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国高速04|CTCU|0.1x
+  type: vless
+  server: cfyes.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-us4.777096.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/us
+    headers:
+      Host: lx-us4.777096.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国高速05|CTCU|0.1x
+  type: vless
+  server: cfyes.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: ''
+  client-fingerprint: chrome
+  servername: lx-us5.777096.xyz
+  network: ws
+  ws-opts:
+    path: /liangxin/us
+    headers:
+      Host: lx-us5.777096.xyz
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国洛杉矶01|流媒体|0.01x
+  type: vless
+  server: lxyus1.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: iosapps.itunes.apple.com
+  reality-opts:
+    public-key: ulU6wfyain_FQnYt23NGunTAfBQNLhIBY49mvekiQB0
+    short-id: ca032f81
+  ip-version: ipv6-prefer
+- name: 🇺🇸美国洛杉矶02|流媒体|0.01x
+  type: vless
+  server: lxyus3.777078.xyz
+  port: 443
+  uuid: 39cae748-e447-4642-ae89-747b69837422
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: iosapps.itunes.apple.com
+  reality-opts:
+    public-key: paFz5M87V_EcKgUk7C9MlHYCTkOMLTNVe-h-6mSHOAk
+    short-id: cffc91ca
+  ip-version: ipv6-prefer
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  include-all-proxies: true
+  exclude-filter: (?i)(剩余|流量|套餐|到期|重置|官网|Traffic|Expire)
+  proxies:
+  - ♻️ 自动选择
+  - 🛡️ 故障转移
+  - DIRECT
+- name: iC iCloud
+  type: select
+  include-all-proxies: true
+  filter: .*
+  exclude-filter: (?i)(?:(?:(剩余|流量|套餐|到期|重置|官网|Traffic|Expire)))
+  proxies:
+  - 🚀 节点选择
+- name: GF GFW 列表
+  type: select
+  include-all-proxies: true
+  filter: .*
+  exclude-filter: (?i)(?:(?:(剩余|流量|套餐|到期|重置|官网|Traffic|Expire)))
+  proxies:
+  - 🚀 节点选择
+- name: ♻️ 自动选择
+  type: url-test
+  include-all-proxies: true
+  exclude-filter: (?i)(?:(?:(剩余|流量|套餐|到期|重置|官网|Traffic|Expire))|(?:(?:(?:((?:香港|Hong Kong|\bHK\b))))))
+  url: https://www.gstatic.com/generate_204
+  interval: 30
+  tolerance: 60
+- name: 🛡️ 故障转移
+  type: fallback
+  include-all-proxies: true
+  exclude-filter: (?i)(剩余|流量|套餐|到期|重置|官网|Traffic|Expire)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - DIRECT
+rules:
+- GEOSITE,private,DIRECT
+- DOMAIN-SUFFIX,bing.com,🚀 节点选择
+- IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.0.0.0/24,DIRECT,no-resolve
+- IP-CIDR,192.0.2.0/24,DIRECT,no-resolve
+- IP-CIDR,192.88.99.0/24,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
+- IP-CIDR,198.51.100.0/24,DIRECT,no-resolve
+- IP-CIDR,203.0.113.0/24,DIRECT,no-resolve
+- IP-CIDR,224.0.0.0/3,DIRECT,no-resolve
+- IP-CIDR6,::/127,DIRECT,no-resolve
+- IP-CIDR6,fc00::/7,DIRECT,no-resolve
+- IP-CIDR6,fe80::/10,DIRECT,no-resolve
+- IP-CIDR6,ff00::/8,DIRECT,no-resolve
+- GEOSITE,category-ads-all,REJECT
+- GEOSITE,icloud,iC iCloud
+- GEOSITE,apple-cn,DIRECT
+- GEOSITE,microsoft@cn,DIRECT
+- GEOSITE,steam@cn,DIRECT
+- GEOSITE,cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,🚀 节点选择
